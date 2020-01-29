@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculatrice</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script type="application/javascript">
+
+
+		function insertion7() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = document.getElementById('ecran').value + "7";
+		}
+
+		function insertion8() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = document.getElementById('ecran').value + "8";
+		}
+		
+		function insertion9() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = document.getElementById('ecran').value + "9";
+		}
+		
+		function insertionslash() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('resultat').value = document.getElementById('resultat').value + document.getElementById('ecran').value;
+			document.getElementById('ecran').value =  " ";
+			calc = '/';
+			document.getElementById('operateur').value = calc;
+		}
+
+		function insertioncarre() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('resultat').value = document.getElementById('resultat').value + document.getElementById('ecran').value;
+			document.getElementById('ecran').value =  " ";
+			calc = 'x²';
+			document.getElementById('operateur').value = calc;
+		}
+	
+
+		function insertionpuissance() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('resultat').value = document.getElementById('resultat').value + document.getElementById('ecran').value;
+			document.getElementById('ecran').value =  " ";
+			calc = '^';
+			document.getElementById('operateur').value = calc;
+		}
+
+
+		function insertionracine() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('resultat').value = document.getElementById('resultat').value + document.getElementById('ecran').value;
+			document.getElementById('ecran').value =  " ";
+			calc = '√';
+			document.getElementById('operateur').value = calc;
+		}
+
+		function insertion4() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = document.getElementById('ecran').value + "4";
+		}
+		
+		function insertion5() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = document.getElementById('ecran').value + "5";
+		}
+		
+		function insertion6() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = document.getElementById('ecran').value + "6";
+		}
+		
+		function insertionfois() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('resultat').value = document.getElementById('resultat').value + document.getElementById('ecran').value;
+			document.getElementById('ecran').value =  " ";
+			calc = '*';
+			document.getElementById('operateur').value = calc;
+		}
+		
+		function insertionnegatif() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = "-" + document.getElementById('ecran').value;
+		}
+		
+
+		function insertion1() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = document.getElementById('ecran').value + "1";
+		}
+		
+		function insertion2() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = document.getElementById('ecran').value + "2";
+		}
+		
+		function insertion3() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = document.getElementById('ecran').value + "3";
+		}
+		
+		function insertion0() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('ecran').value = document.getElementById('ecran').value + "0";
+		}
+		
+		
+		function insertionpourcent() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('resultat').value = document.getElementById('resultat').value + document.getElementById('ecran').value;
+			document.getElementById('ecran').value =  " ";
+			calc = '%';
+			document.getElementById('operateur').value = calc;
+		}
+	
+		function insertionplus() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('resultat').value = document.getElementById('resultat').value + document.getElementById('ecran').value;
+			calc = '+';
+			document.getElementById('operateur').value = calc;
+			document.getElementById('ecran').value =  " ";
+		}
+		
+
+		function insertionmoins() {
+			// document.getElementById('in1').setAttribute("value", "1");
+			document.getElementById('resultat').value = document.getElementById('resultat').value + document.getElementById('ecran').value;
+			document.getElementById('ecran').value =  " ";
+			calc = '-';
+			document.getElementById('operateur').value = calc;
+		}
+
+
+
+
+
+
+
+
+
+		function egal() {
+			if (calc == '+') {
+				document.getElementById('resultat').value = parseInt(document.getElementById('resultat').value) + parseInt(document.getElementById('ecran').value);
+				document.getElementById('ecran').value = " ";
+
+			}else{
+				if (calc == '-') {
+					document.getElementById('resultat').value = parseInt(document.getElementById('resultat').value) - parseInt(document.getElementById('ecran').value);
+					document.getElementById('ecran').value = " ";	
+				}else{
+					if (calc == '*') {
+						document.getElementById('resultat').value = parseInt(document.getElementById('resultat').value) * parseInt(document.getElementById('ecran').value);
+						document.getElementById('ecran').value = " ";	
+					}else{
+						if (calc == '/') {
+							document.getElementById('resultat').value = parseInt(document.getElementById('resultat').value) / parseInt(document.getElementById('ecran').value);
+							document.getElementById('ecran').value = " ";	
+						}else{
+							if (calc == 'x²') {
+								document.getElementById('resultat').value = parseInt(document.getElementById('resultat').value) ** parseInt(document.getElementById('resultat').value);
+								document.getElementById('ecran').value = " ";	
+							}else{
+								if (calc == '%') {
+									document.getElementById('resultat').value = parseInt(document.getElementById('resultat').value) % parseInt(document.getElementById('ecran').value);
+									document.getElementById('ecran').value = " ";	
+								}else{
+									if (calc == '√') {
+										document.getElementById('resultat').value = Math.sqrt(parseInt(document.getElementById('resultat').value));
+										document.getElementById('ecran').value = " ";	
+									}else{
+										if (calc == '^') {
+											document.getElementById('resultat').value = document.getElementById('resultat').value ** parseInt(document.getElementById('ecran').value) ;
+											document.getElementById('ecran').value = " ";	
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+			
+
+		function annuler (){
+			document.getElementById('ecran').value = " ";
+		}
+		
+
+	</script>
+
+
+
+	<form>
+		<p>CALCULATRICE <input type="operateur" name="operateur" id="operateur" type="text" readonly="readonly"></p>
+
+
+		<input id="resultat" type="text" name="Calculatrice" readonly="readonly" ><br>
+		<input id="ecran" type="text" name="Calculatrice" readonly="readonly" ><br>
+
+
+		<div>
+			<input id ="7"   type="button" name="7"   value="7"    onclick="insertion7()">
+			<input id ="8"   type="button" name="8"   value="8"    onclick="insertion8()">
+			<input id ="9"   type="button" name="9"   value="9"    onclick="insertion9()">
+			<input id ="/"   type="button" name="/"   value="/"    onclick="insertionslash()">
+			<input id ="Eff" type="reset"  name="Eff" value="Eff">
+			<input id ="Ann" type="button"  name="Ann" value="Ann" onclick="annuler()">
+		</div>
+
+		<div>
+			<input id ="4" type="button" name="4" value="4"  onclick="insertion4()">
+			<input id ="5" type="button" name="5" value="5"  onclick="insertion5()">
+			<input id ="6" type="button" name="6" value="6"  onclick="insertion6()">
+			<input id ="*" type="button" name="*" value="*"  onclick="insertionfois()">
+			<input id ="(-)" type="button" name="(-)" value="(-)"  onclick="insertionnegatif()"> 
+			<input id ="√" type="button" name="√" value="√"  onclick="insertionracine()">
+			
+		</div>
+
+		<div>
+			<input id ="1" type="button" name="1" value="1"  onclick="insertion1()">
+			<input id ="2" type="button" name="2" value="2"  onclick="insertion2()">
+			<input id ="3" type="button" name="3" value="3"  onclick="insertion3()">
+			<input id ="-" type="button" name="-" value="-"  onclick="insertionmoins()">
+			<input id ="²" type="button" name="x²" value="x²"  onclick="insertioncarre()">
+			<input id ="^" type="button" name="^" value="^" onclick="insertionpuissance()"> 
+
+		</div>
+
+		<div>
+			<input id ="" type="button" name="" value="">
+			<input id ="0" type="button" name="0" value="0"  onclick="insertion0()">
+			<input id ="%" type="button" name="%" value="%"  onclick="insertionpourcent()">
+			<input id ="+" type="button" name="+" value="+"  onclick="insertionplus()">
+			<input id ="calcul" type="button" name="calcul"  value="=" onclick="egal()">
+		</div>
+
+	</form>
+</body>
+</html>
