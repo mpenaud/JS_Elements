@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex,nofollow">
+	<title>JS | CHRONOMETRE </title>
+
+	<!-- CSS FILE -->
+	<link rel="stylesheet" href="style.css" />
+
+	<!--CSS BOOTSTRAP -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- LIB BOOTSTRAP-->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!--SCRIPT BOOTSTRAP -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<meta name="viewport" content="width=device-width" />
+</head>
+<body>
+	<script language="JavaScript">
+
+		var depart = 0
+		var fin = 0
+		var difference = 0
+		var timerID = 0
+
+		function chrono(){
+			fin = new Date()
+			difference = fin - depart
+			difference = new Date(difference)
+			var msec = difference.getMilliseconds()
+			var sec = difference.getSeconds()
+			var min = difference.getMinutes()
+			var hr = difference.getHours()-1
+			if (min < 10){
+				min = "0" + min
+			}
+			if (sec < 10){
+				sec = "0" + sec
+			}
+			if(msec < 10){
+				msec = "00" +msec
+			}
+			else if(msec < 100){
+				msec = "0" +msec
+			}
+			document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec + ":" + msec
+			timerID = setTimeout("chrono()", 10)
+		}
+
+
+		function chronoStart(){
+			depart = new Date()
+			chrono()
+		}
+		function chronoContinue(){
+			depart = new Date()-difference
+			depart = new Date(depart)
+			chrono()
+		}
+		function chronoReset(){
+			document.getElementById("chronotime").innerHTML = "0:00:00:000"
+			depart = new Date()
+			clearTimeout(timerID)
+		}
+		function chronoStop(){
+			clearTimeout(timerID)
+		}
+
+	</script>
+	
+	<div id="chronometre">
+		<span id="chronotime">0:00:00:000</span>
+		<form name="chronoForm">
+			<span  class="glyphicon glyphicon-play"          aria-hidden="true" onClick="chronoStart()"></span>
+			<span  class="glyphicon glyphicon-pause"         aria-hidden="true" onClick="chronoStop()" ></span>
+			<span  class="glyphicon glyphicon-step-forward"  aria-hidden="true" onClick="chronoContinue()"></span>
+			<span  class="glyphicon glyphicon-stop"          aria-hidden="true" onClick="chronoReset()"></span>
+		</form>
+	</div>
+</body>
+</html>

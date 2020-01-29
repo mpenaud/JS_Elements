@@ -1,0 +1,89 @@
+/* JS | Chronometre */
+
+/* GLOBAL DEMO */
+body {
+	background: #f0f3f4;
+	font-family: Arial;
+}
+
+#chronometre{
+	margin: 0 auto;
+	width: 50%;
+	margin-top: 5%;
+	text-align: center;
+
+	padding: 150px 0 150px 0; 
+
+	background-color: #ff6633;
+	border-radius: 15px;
+
+	color: white;
+
+}
+
+#chronotime{
+	font-size: 100px; 
+	font-weight: bold;
+}
+
+form span{
+	font-size: 50px;
+}
+
+form span:hover{
+	color: grey;
+}
+
+
+/**MEDIA SCREEN **/
+@media(max-width:767px){
+	#chronotime{
+		font-size: 55px; 
+		font-weight: bold;
+	}
+
+	form span{
+		font-size: 30px;
+	}
+
+	#chronometre{
+		width: 80%;
+		margin-top: 50%;
+		padding: 75px 0 75px 0; 
+	}	
+}
+
+
+@media(min-width:767px){
+	#chronotime{
+		font-size: 90px; 
+		font-weight: bold;
+	}
+
+	form span{
+		font-size: 50px;
+	}
+
+	#chronometre{
+		width: 80%;
+		margin-top: 50%;
+		padding: 75px 0 75px 0; 
+	}	
+
+}
+@media(min-width:992px){
+	#chronotime{
+		font-size: 140px; 
+		font-weight: bold;
+	}
+
+	form span{
+		font-size: 50px;
+	}
+
+	#chronometre{
+		width: 80%;
+		margin-top: 10%;
+		padding: 75px 0 75px 0; 
+	}
+}
