@@ -1,0 +1,28 @@
+/* TUTO JAVASCRIPT CANVAS - MPENAUD */
+
+/* GLOBAL DEMO */
+body {
+	background: #f0f3f4;
+	}
+	
+.ctn-demo {
+	margin-top: 80px
+	}
+	
+.exemple {
+	background: #E0E0E0;
+	height: 200px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	margin: 15px;
+	padding-top: 10px;
+	}
+
+.ctn-demo [class^="col-"] {
+	margin-bottom: 20px;
+	}
+
+canvas{
+	background-color: #9c9c9c;
+	border-radius: 5px;
+}
